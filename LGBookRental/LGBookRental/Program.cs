@@ -11,6 +11,9 @@ namespace LGBookRental
     {
         static void Main(string[] args)
         {
+            login frm = new login();
+            frm.Show();
+
             int bookId = 0;
             int numDays = 0;
             Inventory myInventory = new Inventory();
@@ -42,5 +45,9 @@ namespace LGBookRental
             Console.ReadLine();
             
         }
+        public void DoStuff()
+{
+    Console.WriteLine("I'm doing something...");
+}
     }
 }
