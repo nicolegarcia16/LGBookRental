@@ -28,10 +28,12 @@ namespace WindowsFormsApplication1
             try
             {
                 dbDataSetTableAdapters.usersTableAdapter user = new dbDataSetTableAdapters.usersTableAdapter();
+                User currentUser;
                 dbDataSet.usersDataTable dt = user.GetDataByloginpass(textBox1.Text, textBox2.Text);
                 if (dt.Rows.Count > 0)
                 {
                     MessageBox.Show("You logged in!");
+                    currentUser = new User(textBox1.Text, textBox2.Text);
                     app frm = new app();
                     frm.Show();
                     this.Hide();

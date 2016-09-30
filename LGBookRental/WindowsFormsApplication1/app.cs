@@ -22,5 +22,10 @@ namespace WindowsFormsApplication1
             main frm = new main();
             frm.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
