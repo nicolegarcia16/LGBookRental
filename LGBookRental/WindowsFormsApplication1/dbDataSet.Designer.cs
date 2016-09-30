@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace LGBookRental {
+namespace WindowsFormsApplication1 {
     
     
     /// <summary>
@@ -978,7 +978,7 @@ namespace LGBookRental {
         }
     }
 }
-namespace LGBookRental.dbDataSetTableAdapters {
+namespace WindowsFormsApplication1.dbDataSetTableAdapters {
     
     
     /// <summary>
@@ -1188,7 +1188,7 @@ namespace LGBookRental.dbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::LGBookRental.Properties.Settings.Default.dbConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApplication1.Properties.Settings.Default.dbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

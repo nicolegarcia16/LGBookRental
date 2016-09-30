@@ -1,6 +1,6 @@
-﻿namespace LGBookRental
+﻿namespace WindowsFormsApplication1
 {
-    partial class login
+    partial class main
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(123, 188);
+            this.button1.Location = new System.Drawing.Point(98, 172);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -47,14 +47,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 52);
+            this.textBox1.Location = new System.Drawing.Point(98, 48);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(73, 121);
+            this.textBox2.Location = new System.Drawing.Point(98, 124);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 2;
@@ -62,22 +62,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(73, 33);
+            this.label1.Location = new System.Drawing.Point(98, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "user";
+            this.label1.Text = "User";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 102);
+            this.label2.Location = new System.Drawing.Point(101, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "pass";
+            this.label2.Text = "Pass";
             // 
-            // login
+            // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -87,7 +87,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Name = "login";
+            this.Name = "main";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -103,3 +103,4 @@
         private System.Windows.Forms.Label label2;
     }
 }
+
