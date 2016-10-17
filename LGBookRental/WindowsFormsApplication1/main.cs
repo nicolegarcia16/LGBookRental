@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a correct username and password");
+                    MessageBox.Show("Incorrect username or password");
                 }
 
             }

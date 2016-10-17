@@ -15,6 +15,20 @@ namespace WindowsFormsApplication1
         public app()
         {
             InitializeComponent();
+
+
+            Book b1 = new Book(547628, "UML Patterns", 4799);
+
+
+            booklist.Items.Add(b1.bookName);
+
+
+            if (booklist.Text == "UML Patterns")
+            {
+                bookprice.Text = Convert.ToString(b1.rentalPrice);
+            }
+
+            InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,6 +40,21 @@ namespace WindowsFormsApplication1
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void placeorderbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void booklist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
