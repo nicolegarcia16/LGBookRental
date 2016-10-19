@@ -12,23 +12,33 @@ namespace WindowsFormsApplication1
 {
     public partial class app : Form
     {
+        // Aqui puedes poner class attributes.
+        private List<Book> availableBooks;
+
         public app()
         {
             InitializeComponent();
+            
+            availableBooks = new List<Book>();
+            availableBooks.Add(new Book(547628, "UML Patterns", 4799));
+            availableBooks.Add(new Book(2, "Test Patterns", 12.99));
+
+            //Book b1 = new Book(547628, "UML Patterns", 4799);
+
+            BindingSource bookSource = new BindingSource();
+            bookSource.DataSource = availableBooks;
+            booklist.DataSource = bookSource.DataSource;
+            booklist.DisplayMember = "bookName";
+            booklist.ValueMember = "rentalPrice";
+
+            //booklist.Items.Add(b1.bookName);
+
+            // readonly! dame un break lol
+            //booklist.
+
+       
 
 
-            Book b1 = new Book(547628, "UML Patterns", 4799);
-
-
-            booklist.Items.Add(b1.bookName);
-
-
-            if (booklist.Text == "UML Patterns")
-            {
-                bookprice.Text = Convert.ToString(b1.rentalPrice);
-            }
-
-            InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,7 +64,19 @@ namespace WindowsFormsApplication1
 
         private void booklist_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+            bookprice.Text = ((Book)booklist.SelectedItem).rentalPrice.ToString();
+            Bookname.Text = ((Book)booklist.SelectedItem).bookName.ToString();
+
+            if (Bookname.Text == "UML Patterns")
+            {
+                bookpicture.Image = Image.FromFile("img/uml.jpg");
+            }
+            else
+            {
+                bookpicture.Image = Image.FromFile("img/Book.png");
+
+            }
         }
     }
 }

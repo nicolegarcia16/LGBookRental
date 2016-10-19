@@ -8,9 +8,9 @@ namespace WindowsFormsApplication1
 {
     public class Book
     {
-        public int bookId;
-        public string bookName;
-        public double rentalPrice;
+        public int bookId { get; set; } 
+        public string bookName { get; set; }
+        public double rentalPrice { get; set; }
 
         public Book(int id, string name, double price)
         {
@@ -18,5 +18,8 @@ namespace WindowsFormsApplication1
             bookName = name;
             rentalPrice = price;
         }
+
+
+
     }
 }
