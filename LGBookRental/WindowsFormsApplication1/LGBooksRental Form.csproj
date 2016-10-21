@@ -52,6 +52,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AccountCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountCreate.Designer.cs">
+      <DependentUpon>AccountCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="app.resx">
       <DependentUpon>app.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountCreate.resx">
+      <DependentUpon>AccountCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>

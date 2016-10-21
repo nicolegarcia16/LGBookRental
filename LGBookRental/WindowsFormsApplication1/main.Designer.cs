@@ -33,6 +33,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Createbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -77,11 +78,22 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Pass";
             // 
+            // Createbtn
+            // 
+            this.Createbtn.Location = new System.Drawing.Point(181, 226);
+            this.Createbtn.Name = "Createbtn";
+            this.Createbtn.Size = new System.Drawing.Size(91, 23);
+            this.Createbtn.TabIndex = 5;
+            this.Createbtn.Text = "Create Account";
+            this.Createbtn.UseVisualStyleBackColor = true;
+            this.Createbtn.Click += new System.EventHandler(this.Createbtn_Click);
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.Createbtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
@@ -101,6 +113,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Createbtn;
     }
 }
 

@@ -50,5 +50,21 @@ namespace WindowsFormsApplication1
                 throw;
             }
         }
+
+        private void Createbtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+            AccountCreate frm = new AccountCreate();
+            frm.Show();
+            this.Hide();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
     }
 }
