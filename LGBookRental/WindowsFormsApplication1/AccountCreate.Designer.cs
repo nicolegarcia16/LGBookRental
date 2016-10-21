@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.Nametextbox = new System.Windows.Forms.TextBox();
+            this.lastnametextbox = new System.Windows.Forms.TextBox();
+            this.addresstextbox = new System.Windows.Forms.TextBox();
+            this.citytextbox = new System.Windows.Forms.TextBox();
+            this.statetextbox = new System.Windows.Forms.TextBox();
+            this.ziptextbox = new System.Windows.Forms.TextBox();
+            this.emailtextbox = new System.Windows.Forms.TextBox();
+            this.passwordtextbox = new System.Windows.Forms.TextBox();
+            this.passwordconfirmtextbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,68 +50,69 @@
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Nametextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.Nametextbox.Location = new System.Drawing.Point(93, 72);
+            this.Nametextbox.Name = "Nametextbox";
+            this.Nametextbox.Size = new System.Drawing.Size(100, 20);
+            this.Nametextbox.TabIndex = 0;
             // 
-            // textBox2
+            // lastnametextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(255, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.lastnametextbox.Location = new System.Drawing.Point(255, 72);
+            this.lastnametextbox.Name = "lastnametextbox";
+            this.lastnametextbox.Size = new System.Drawing.Size(100, 20);
+            this.lastnametextbox.TabIndex = 1;
+            this.lastnametextbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // addresstextbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(93, 123);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(262, 20);
-            this.textBox3.TabIndex = 2;
+            this.addresstextbox.Location = new System.Drawing.Point(93, 123);
+            this.addresstextbox.Name = "addresstextbox";
+            this.addresstextbox.Size = new System.Drawing.Size(262, 20);
+            this.addresstextbox.TabIndex = 2;
             // 
-            // textBox4
+            // citytextbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(93, 179);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.citytextbox.Location = new System.Drawing.Point(93, 179);
+            this.citytextbox.Name = "citytextbox";
+            this.citytextbox.Size = new System.Drawing.Size(100, 20);
+            this.citytextbox.TabIndex = 3;
             // 
-            // textBox5
+            // statetextbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(221, 178);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(47, 20);
-            this.textBox5.TabIndex = 4;
+            this.statetextbox.Location = new System.Drawing.Point(221, 178);
+            this.statetextbox.Name = "statetextbox";
+            this.statetextbox.Size = new System.Drawing.Size(47, 20);
+            this.statetextbox.TabIndex = 4;
             // 
-            // textBox6
+            // ziptextbox
             // 
-            this.textBox6.Location = new System.Drawing.Point(293, 178);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(62, 20);
-            this.textBox6.TabIndex = 5;
+            this.ziptextbox.Location = new System.Drawing.Point(293, 178);
+            this.ziptextbox.Name = "ziptextbox";
+            this.ziptextbox.Size = new System.Drawing.Size(62, 20);
+            this.ziptextbox.TabIndex = 5;
             // 
-            // textBox7
+            // emailtextbox
             // 
-            this.textBox7.Location = new System.Drawing.Point(93, 244);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 6;
+            this.emailtextbox.Location = new System.Drawing.Point(93, 244);
+            this.emailtextbox.Name = "emailtextbox";
+            this.emailtextbox.Size = new System.Drawing.Size(100, 20);
+            this.emailtextbox.TabIndex = 6;
             // 
-            // textBox8
+            // passwordtextbox
             // 
-            this.textBox8.Location = new System.Drawing.Point(93, 291);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 7;
+            this.passwordtextbox.Location = new System.Drawing.Point(93, 291);
+            this.passwordtextbox.Name = "passwordtextbox";
+            this.passwordtextbox.Size = new System.Drawing.Size(100, 20);
+            this.passwordtextbox.TabIndex = 7;
             // 
-            // textBox9
+            // passwordconfirmtextbox
             // 
-            this.textBox9.Location = new System.Drawing.Point(232, 290);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 8;
+            this.passwordconfirmtextbox.Location = new System.Drawing.Point(232, 290);
+            this.passwordconfirmtextbox.Name = "passwordconfirmtextbox";
+            this.passwordconfirmtextbox.Size = new System.Drawing.Size(100, 20);
+            this.passwordconfirmtextbox.TabIndex = 8;
             // 
             // label1
             // 
@@ -202,6 +203,7 @@
             this.button1.TabIndex = 18;
             this.button1.Text = "Create";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -229,15 +231,15 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passwordconfirmtextbox);
+            this.Controls.Add(this.passwordtextbox);
+            this.Controls.Add(this.emailtextbox);
+            this.Controls.Add(this.ziptextbox);
+            this.Controls.Add(this.statetextbox);
+            this.Controls.Add(this.citytextbox);
+            this.Controls.Add(this.addresstextbox);
+            this.Controls.Add(this.lastnametextbox);
+            this.Controls.Add(this.Nametextbox);
             this.Name = "AccountCreate";
             this.Text = "Account Creation";
             this.ResumeLayout(false);
@@ -247,15 +249,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox Nametextbox;
+        private System.Windows.Forms.TextBox lastnametextbox;
+        private System.Windows.Forms.TextBox addresstextbox;
+        private System.Windows.Forms.TextBox citytextbox;
+        private System.Windows.Forms.TextBox statetextbox;
+        private System.Windows.Forms.TextBox ziptextbox;
+        private System.Windows.Forms.TextBox emailtextbox;
+        private System.Windows.Forms.TextBox passwordtextbox;
+        private System.Windows.Forms.TextBox passwordconfirmtextbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
