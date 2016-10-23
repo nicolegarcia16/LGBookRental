@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.OleDb;
 
 namespace WindowsFormsApplication1
 {
@@ -39,12 +42,50 @@ namespace WindowsFormsApplication1
             }
             else
             {
+            System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
+
+                //MAKE SURE TO CHANGE THE DB LOCATION TO YOUR DIRECTORY
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;" +
+        @"Data source= C:\Users\Masters PC\Desktop\SSE657 Object oriented design\LGBookRental\LGBookRental\WindowsFormsApplication1\db.mdb";
+
+            try
+            {
+                conn.Open();
+
+                String my_querry = "INSERT INTO users (login,pass,firstname,lastname,address,city,state,zipcode,phone) VALUES('"+emailtextbox.Text+"','"+passwordtextbox.Text+ "','"+Nametextbox.Text+"','"+lastnametextbox.Text+"','" + addresstextbox.Text +"','"+citytextbox.Text+"','"+statetextbox.Text+"','"+ziptextbox.Text+"','"+phonetextbox.Text+"')";
+
+                OleDbCommand cmd = new OleDbCommand(my_querry, conn);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Data saved successfuly...!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed due to" + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
 
             }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+
 
         }
     }
