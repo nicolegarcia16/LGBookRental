@@ -11,8 +11,8 @@ namespace LGBookRental
     {
         static void Main(string[] args)
         {
-            login frm = new login();
-            frm.Show();
+            //login frm = new login();
+            //frm.Show();
 
             int bookId = 0;
             int numDays = 0;

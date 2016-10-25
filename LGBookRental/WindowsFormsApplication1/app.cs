@@ -12,16 +12,14 @@ namespace WindowsFormsApplication1
 {
     public partial class app : Form
     {
-        // Aqui puedes poner class attributes.
+        // Aqui puedes poner class attributes. 
         private List<Book> availableBooks;
 
         public app()
         {
             InitializeComponent();
-            
-            availableBooks = new List<Book>();
-            availableBooks.Add(new Book(547628, "UML Patterns", 4799));
-            availableBooks.Add(new Book(2, "Test Patterns", 12.99));
+
+            availableBooks = addAvailableBooks();
 
             //Book b1 = new Book(547628, "UML Patterns", 4799);
 
@@ -78,5 +76,14 @@ namespace WindowsFormsApplication1
 
             }
         }
+
+        public List<Book> addAvailableBooks()
+        {
+            availableBooks = new List<Book>();
+            availableBooks.Add(new Book(547628, "UML Patterns", 47.99));
+            availableBooks.Add(new Book(2, "Test Patterns", 12.99));
+            return availableBooks;
+        }
+
     }
 }

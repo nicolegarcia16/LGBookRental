@@ -46,7 +46,7 @@ namespace WindowsFormsApplication1
 
                 //MAKE SURE TO CHANGE THE DB LOCATION TO YOUR DIRECTORY
             conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;" +
-        @"Data source= C:\Users\Masters PC\Desktop\SSE657 Object oriented design\LGBookRental\LGBookRental\WindowsFormsApplication1\db.mdb";
+        @"Data source= C:\Users\nicol\Source\Repos\LGBookRental\LGBookRental\WindowsFormsApplication1\db.mdb";
 
             try
             {
