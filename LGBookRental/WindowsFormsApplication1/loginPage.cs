@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class main : Form
+    public partial class loginPage : Form
     {
-        public main()
+        public loginPage()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
                 {
                     MessageBox.Show("You logged in!");
                     currentUser = new User(textBox1.Text, textBox2.Text);
-                    app frm = new app();
+                    availableBooksPage frm = new availableBooksPage();
                     frm.Show();
                     this.Hide();
                 }

@@ -10,11 +10,13 @@ namespace WindowsFormsApplication1
     {
         public string userId;
         private string password;
+        public List<Order> orders;
 
         public User(string ID, string pswd)
         {
             this.userId = ID;
             this.password = pswd;
+            orders = new List<Order>();
         }
     }
     

@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            main frm = new main();
+            loginPage frm = new loginPage();
             frm.Show();
             this.Hide();
         }

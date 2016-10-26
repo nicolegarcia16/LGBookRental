@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LGBookRental", "LGBookRenta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LGBooksRental Form", "WindowsFormsApplication1\LGBooksRental Form.csproj", "{2543C186-901B-4259-8F5B-2739C18C92A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LGBooksRental_Form_Test", "LGBooksRental_Form_Test\LGBooksRental_Form_Test.csproj", "{EE588E56-7613-4CC8-948D-2A827A2E40D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2543C186-901B-4259-8F5B-2739C18C92A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2543C186-901B-4259-8F5B-2739C18C92A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2543C186-901B-4259-8F5B-2739C18C92A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE588E56-7613-4CC8-948D-2A827A2E40D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE588E56-7613-4CC8-948D-2A827A2E40D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE588E56-7613-4CC8-948D-2A827A2E40D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE588E56-7613-4CC8-948D-2A827A2E40D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

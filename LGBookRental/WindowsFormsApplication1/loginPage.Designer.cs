@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class main
+    partial class loginPage
     {
         /// <summary>
         /// Required designer variable.

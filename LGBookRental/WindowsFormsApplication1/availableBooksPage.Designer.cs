@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class app
+    partial class availableBooksPage
     {
         /// <summary>
         /// Required designer variable.

@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class app : Form
+    public partial class availableBooksPage : Form
     {
         // Aqui puedes poner class attributes. 
         private List<Book> availableBooks;
 
-        public app()
+        public availableBooksPage()
         {
             InitializeComponent();
 
@@ -41,7 +41,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            main frm = new main();
+            loginPage frm = new loginPage();
             frm.Show();
         }
 
