@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace LGBookRentals
 {
     public partial class checkoutPage : Form
     {
         private Order currentOrder;
-        public checkoutPage(Order currentOrder)
+        private User currentUser;
+        public checkoutPage(Order currentOrder, User currentUser)
         {
             InitializeComponent();
             orderLabel.Text = ("Order Information: \n Book Name: "
@@ -25,6 +26,7 @@ namespace WindowsFormsApplication1
                                 + "\n Total Due: "
                                 + currentOrder.orderTotal);
             this.currentOrder = currentOrder;
+            this.currentUser = currentUser;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -57,7 +59,7 @@ namespace WindowsFormsApplication1
             {
                 currentOrder = addShippingAndPaymentInfo(currentOrder, shippingAddress.Text, creditCardNumber.Text);
                 currentOrder = createAndAddDisplayCreditCardNumber(currentOrder);
-                orderConfirmationPage frm = new orderConfirmationPage(currentOrder);
+                orderConfirmationPage frm = new orderConfirmationPage(currentOrder, currentUser);
                 frm.Show();
                 this.Hide();
             }
@@ -65,7 +67,9 @@ namespace WindowsFormsApplication1
 
         private void editOrder_Click(object sender, EventArgs e)
         {
-
+            availableBooksPage frm = new availableBooksPage(currentUser);
+            frm.Show();
+            this.Hide();
         }
 
         public string createDisplayCreditCardNumber(string creditCardNumber)

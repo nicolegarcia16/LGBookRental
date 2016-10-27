@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace LGBookRentals
 {
     public partial class loginPage : Form
     {
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
                 {
                     //MessageBox.Show("You logged in!");
                     currentUser = new User(textBox1.Text, textBox2.Text);
-                    availableBooksPage frm = new availableBooksPage();
+                    availableBooksPage frm = new availableBooksPage(currentUser);
                     frm.Show();
                     this.Hide();
                 }

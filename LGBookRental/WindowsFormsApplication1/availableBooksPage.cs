@@ -8,17 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace LGBookRentals
 {
     public partial class availableBooksPage : Form
     {
-        // Aqui puedes poner class attributes. 
         private List<Book> availableBooks;
+        private User currentUser;
 
-        public availableBooksPage()
+        public availableBooksPage(User currentUser)
         {
             InitializeComponent();
-
+            this.currentUser = currentUser;
             availableBooks = addAvailableBooks();
 
             //Book b1 = new Book(547628, "UML Patterns", 4799);
@@ -31,8 +31,7 @@ namespace WindowsFormsApplication1
 
             //booklist.Items.Add(b1.bookName);
 
-            // readonly! dame un break lol
-            //booklist.
+            // readonly! 
 
        
 
@@ -59,7 +58,7 @@ namespace WindowsFormsApplication1
         {
             Book selectedBook = (Book)booklist.SelectedItem;
             Order currentOrder = createNewOrder(selectedBook, int.Parse(RentalLenght.Text));
-            checkoutPage frm = new checkoutPage(currentOrder);
+            checkoutPage frm = new checkoutPage(currentOrder, currentUser);
             frm.Show();
             this.Hide();
         }

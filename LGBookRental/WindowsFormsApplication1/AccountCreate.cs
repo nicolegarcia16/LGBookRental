@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using System.Data.OleDb;
 
-namespace WindowsFormsApplication1
+namespace LGBookRentals
 {
     public partial class AccountCreate : Form
     {

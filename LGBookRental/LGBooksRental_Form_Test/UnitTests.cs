@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WindowsFormsApplication1;
+using LGBookRentals;
 using System.Collections.Generic;
 
 namespace LGBooksRental_Form_Test
@@ -11,7 +11,8 @@ namespace LGBooksRental_Form_Test
         [TestMethod]
         public void TestAddAvailableBooks()
         {
-            availableBooksPage bookApp = new availableBooksPage();
+            User currentUser = new User("nicole", "word");
+            availableBooksPage bookApp = new availableBooksPage(currentUser);
             List<Book> bookList = bookApp.addAvailableBooks();
             Assert.IsTrue(bookList.Count > 0);
         }
@@ -29,7 +30,8 @@ namespace LGBooksRental_Form_Test
         [TestMethod]
         public void TestCreateOrderMethod()
         {
-            availableBooksPage bookApp = new availableBooksPage();
+            User currentUser = new User("nicole", "word");
+            availableBooksPage bookApp = new availableBooksPage(currentUser);
             Book selectedBook = new Book(12, "Patterns", 12.99);
             Order order1 =  bookApp.createNewOrder(selectedBook, 3);
             double intendedPrice = 12.99 * 3 + 12.99 * 3 * 0.07;
@@ -45,20 +47,13 @@ namespace LGBooksRental_Form_Test
             Assert.IsTrue(user1.orders.Count > 0);
         }
 
-        [TestMethod]
-        public void TestPlaceOrder()
-        {
-            User user1 = new User("nicole", "word");
-            Order order1 = new Order("Test Patterns", 2, 3, 12.99);
-            user1.orders.Add(order1);
-            Assert.IsTrue(user1.orders.Count > 0);
-        }
 
         [TestMethod]
         public void TestAddShippingAndPaymentInfo()
         {
+            User currentUser = new User("nicole", "word");
             Order testOrder = new Order("Test", 12, 3, 5.00);
-            checkoutPage currentCheckoutPage = new checkoutPage(testOrder);
+            checkoutPage currentCheckoutPage = new checkoutPage(testOrder, currentUser);
             testOrder = currentCheckoutPage.addShippingAndPaymentInfo(testOrder, "982 Magnolia St.", "1234567890");
             Assert.AreEqual(testOrder.shippingAddress, "982 Magnolia St.");
         }
@@ -66,8 +61,9 @@ namespace LGBooksRental_Form_Test
         [TestMethod]
         public void TestCreateDisplayCreditCardNumber()
         {
+            User currentUser = new User("nicole", "word");
             Order testOrder = new Order("Test", 12, 3, 5.00);
-            checkoutPage currentCheckoutPage = new checkoutPage(testOrder);
+            checkoutPage currentCheckoutPage = new checkoutPage(testOrder, currentUser);
             testOrder = currentCheckoutPage.addShippingAndPaymentInfo(testOrder, "982 Magnolia St.", "1234567890");
             string displayNumber = currentCheckoutPage.createDisplayCreditCardNumber(testOrder.creditCardNumber);
             Assert.AreEqual(displayNumber, "******7890");
@@ -76,8 +72,9 @@ namespace LGBooksRental_Form_Test
         [TestMethod]
         public void TestAddDisplayCreditCardNumberToOrder()
         {
+            User currentUser = new User("nicole", "word");
             Order testOrder = new Order("Test", 12, 3, 5.00);
-            checkoutPage currentCheckoutPage = new checkoutPage(testOrder);
+            checkoutPage currentCheckoutPage = new checkoutPage(testOrder, currentUser);
             testOrder = currentCheckoutPage.addShippingAndPaymentInfo(testOrder, "982 Magnolia St.", "1234567890");
             string displayNumber = currentCheckoutPage.createDisplayCreditCardNumber(testOrder.creditCardNumber);
             currentCheckoutPage.addDisplayCreditCardNumberToOrder(testOrder, displayNumber);
@@ -88,8 +85,9 @@ namespace LGBooksRental_Form_Test
         [TestMethod]
         public void TestCreateAndAddDisplayCreditCardNumber()
         {
+            User currentUser = new User("nicole", "word");
             Order testOrder = new Order("Test", 12, 3, 5.00);
-            checkoutPage currentCheckoutPage = new checkoutPage(testOrder);
+            checkoutPage currentCheckoutPage = new checkoutPage(testOrder, currentUser);
             testOrder = currentCheckoutPage.addShippingAndPaymentInfo(testOrder, "982 Magnolia St.", "1234567890");
             currentCheckoutPage.createAndAddDisplayCreditCardNumber(testOrder);
             Assert.AreEqual(testOrder.displayCreditCardNumber, "******7890");

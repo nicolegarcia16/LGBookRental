@@ -8,14 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace LGBookRentals
 {
     public partial class orderConfirmationPage : Form
     {
         Order currentOrder;
-        public orderConfirmationPage(Order currentOrder)
+        User currentUser;
+        public orderConfirmationPage(Order currentOrder, User currentUser)
         {
             this.currentOrder = currentOrder;
+            this.currentUser = currentUser;
             InitializeComponent();
             orderLabel.Text = ("Order Information: \n Book Name: "
                             + currentOrder.bookRented.bookName
@@ -31,7 +33,14 @@ namespace WindowsFormsApplication1
                             + currentOrder.displayCreditCardNumber);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void goBackBtn_Click(object sender, EventArgs e)
+        {
+            checkoutPage frm = new checkoutPage(currentOrder, currentUser);
+            frm.Show();
+            this.Hide();
+        }
+
+        private void finishBtn_Click(object sender, EventArgs e)
         {
 
         }
