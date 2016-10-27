@@ -56,11 +56,19 @@ namespace LGBookRentals
 
         private void placeorderbtn_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(RentalLenght.Text))
+            {
+                MessageBox.Show("Please enter a rental lenght");
+            }
+            else
+            {
             Book selectedBook = (Book)booklist.SelectedItem;
             Order currentOrder = createNewOrder(selectedBook, int.Parse(RentalLenght.Text));
             checkoutPage frm = new checkoutPage(currentOrder, currentUser);
             frm.Show();
             this.Hide();
+            }
+
         }
 
         private void booklist_SelectedIndexChanged(object sender, EventArgs e)
