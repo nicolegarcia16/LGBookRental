@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Bookname = new System.Windows.Forms.TextBox();
-            this.Rentallenght = new System.Windows.Forms.TextBox();
+            this.RentalLenght = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.placeorderbtn = new System.Windows.Forms.Button();
             this.booklist = new System.Windows.Forms.ComboBox();
@@ -47,9 +47,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label1.Location = new System.Drawing.Point(32, 7);
+            this.label1.Location = new System.Drawing.Point(43, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 39);
+            this.label1.Size = new System.Drawing.Size(318, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "Available Books";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -57,46 +58,43 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(293, 108);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(391, 133);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Book Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(293, 145);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(391, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.Size = new System.Drawing.Size(97, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Rental Length";
             // 
             // Bookname
             // 
-            this.Bookname.Location = new System.Drawing.Point(296, 124);
-            this.Bookname.Margin = new System.Windows.Forms.Padding(2);
+            this.Bookname.Location = new System.Drawing.Point(395, 153);
+            this.Bookname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bookname.Name = "Bookname";
-            this.Bookname.Size = new System.Drawing.Size(223, 20);
+            this.Bookname.Size = new System.Drawing.Size(296, 22);
             this.Bookname.TabIndex = 4;
             // 
-            // Rentallenght
+            // RentalLenght
             // 
-            this.Rentallenght.Location = new System.Drawing.Point(296, 161);
-            this.Rentallenght.Margin = new System.Windows.Forms.Padding(2);
-            this.Rentallenght.Name = "Rentallenght";
-            this.Rentallenght.Size = new System.Drawing.Size(223, 20);
-            this.Rentallenght.TabIndex = 5;
+            this.RentalLenght.Location = new System.Drawing.Point(395, 198);
+            this.RentalLenght.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RentalLenght.Name = "RentalLenght";
+            this.RentalLenght.Size = new System.Drawing.Size(296, 22);
+            this.RentalLenght.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label4.Location = new System.Drawing.Point(296, 32);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(395, 39);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(222, 47);
+            this.label4.Size = new System.Drawing.Size(296, 58);
             this.label4.TabIndex = 6;
             this.label4.Text = "Please enter the name of the book that you would like to check out and the rental" +
     " length in days.";
@@ -104,10 +102,10 @@
             // 
             // placeorderbtn
             // 
-            this.placeorderbtn.Location = new System.Drawing.Point(350, 208);
-            this.placeorderbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.placeorderbtn.Location = new System.Drawing.Point(467, 256);
+            this.placeorderbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.placeorderbtn.Name = "placeorderbtn";
-            this.placeorderbtn.Size = new System.Drawing.Size(104, 57);
+            this.placeorderbtn.Size = new System.Drawing.Size(139, 70);
             this.placeorderbtn.TabIndex = 8;
             this.placeorderbtn.Text = "Place Order";
             this.placeorderbtn.UseVisualStyleBackColor = true;
@@ -116,52 +114,57 @@
             // booklist
             // 
             this.booklist.FormattingEnabled = true;
-            this.booklist.Location = new System.Drawing.Point(39, 91);
+            this.booklist.Location = new System.Drawing.Point(52, 112);
+            this.booklist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.booklist.Name = "booklist";
-            this.booklist.Size = new System.Drawing.Size(151, 21);
+            this.booklist.Size = new System.Drawing.Size(200, 24);
             this.booklist.TabIndex = 9;
             this.booklist.SelectedIndexChanged += new System.EventHandler(this.booklist_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 72);
+            this.label5.Location = new System.Drawing.Point(52, 89);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 13);
+            this.label5.Size = new System.Drawing.Size(171, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Select a book from the list";
             // 
             // bookprice
             // 
-            this.bookprice.Location = new System.Drawing.Point(39, 138);
+            this.bookprice.Location = new System.Drawing.Point(52, 170);
+            this.bookprice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bookprice.Name = "bookprice";
             this.bookprice.ReadOnly = true;
-            this.bookprice.Size = new System.Drawing.Size(63, 20);
+            this.bookprice.Size = new System.Drawing.Size(83, 22);
             this.bookprice.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(39, 119);
+            this.label6.Location = new System.Drawing.Point(52, 146);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.Size = new System.Drawing.Size(39, 17);
             this.label6.TabIndex = 12;
             this.label6.Text = "price";
             // 
             // bookpicture
             // 
-            this.bookpicture.Location = new System.Drawing.Point(39, 190);
+            this.bookpicture.Location = new System.Drawing.Point(52, 234);
+            this.bookpicture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bookpicture.Name = "bookpicture";
-            this.bookpicture.Size = new System.Drawing.Size(129, 122);
+            this.bookpicture.Size = new System.Drawing.Size(172, 150);
             this.bookpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bookpicture.TabIndex = 13;
             this.bookpicture.TabStop = false;
             // 
-            // app
+            // availableBooksPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 335);
+            this.ClientSize = new System.Drawing.Size(869, 412);
             this.Controls.Add(this.bookpicture);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.bookprice);
@@ -169,12 +172,13 @@
             this.Controls.Add(this.booklist);
             this.Controls.Add(this.placeorderbtn);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.Rentallenght);
+            this.Controls.Add(this.RentalLenght);
             this.Controls.Add(this.Bookname);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "app";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "availableBooksPage";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.bookpicture)).EndInit();
             this.ResumeLayout(false);
@@ -188,7 +192,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Bookname;
-        private System.Windows.Forms.TextBox Rentallenght;
+        private System.Windows.Forms.TextBox RentalLenght;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button placeorderbtn;
         private System.Windows.Forms.ComboBox booklist;

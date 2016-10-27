@@ -57,7 +57,11 @@ namespace WindowsFormsApplication1
 
         private void placeorderbtn_Click(object sender, EventArgs e)
         {
-
+            Book selectedBook = (Book)booklist.SelectedItem;
+            Order currentOrder = createNewOrder(selectedBook, int.Parse(RentalLenght.Text));
+            checkoutPage frm = new checkoutPage(currentOrder);
+            frm.Show();
+            this.Hide();
         }
 
         private void booklist_SelectedIndexChanged(object sender, EventArgs e)
@@ -73,7 +77,6 @@ namespace WindowsFormsApplication1
             else
             {
                 bookpicture.Image = Image.FromFile("img/Book.png");
-
             }
         }
 
@@ -85,5 +88,10 @@ namespace WindowsFormsApplication1
             return availableBooks;
         }
 
+        public Order createNewOrder(Book selectedBook, int rentalLength)
+        {
+            Order newOrder = new Order(selectedBook.bookName, selectedBook.bookId, rentalLength, selectedBook.rentalPrice);
+            return newOrder;
+        }
     }
 }

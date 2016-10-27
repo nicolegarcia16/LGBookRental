@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
         public Book bookRented;
         public string shippingAddress;
         public string creditCardNumber;
+        public string displayCreditCardNumber;
+        public int rentalLength;
 
         public Order(string bookName, int bookId, int rentalLength, double pricePerDay)
         {
@@ -22,6 +24,7 @@ namespace WindowsFormsApplication1
             orderDate = DateTime.Now.Date;
             subtotal = pricePerDay * rentalLength;
             orderTotal = subtotal + subtotal * 0.07; //0.7 is standard GA tax
+            this.rentalLength = rentalLength;
 
 
         }
