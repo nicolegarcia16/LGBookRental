@@ -31,7 +31,7 @@ namespace LGBookRentals
 
         public string toString()
         {
-            return "Order Number: " + orderNumber + "\nOrder Date: " + orderDate +
+            return "Order Date: " + orderDate +
                 "\nOrder Total: " + orderTotal + "\nBooks Rented: " + bookRented.bookName;
         }
     }

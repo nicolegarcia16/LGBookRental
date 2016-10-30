@@ -62,11 +62,12 @@ namespace LGBookRentals
             }
             else
             {
-            Book selectedBook = (Book)booklist.SelectedItem;
-            Order currentOrder = createNewOrder(selectedBook, int.Parse(RentalLenght.Text));
-            checkoutPage frm = new checkoutPage(currentOrder, currentUser);
-            frm.Show();
-            this.Hide();
+                Book selectedBook = (Book)booklist.SelectedItem;
+                Order currentOrder = createNewOrder(selectedBook, int.Parse(RentalLenght.Text));
+                addOrderToAccount(currentOrder, this.currentUser);
+                checkoutPage frm = new checkoutPage(currentOrder, currentUser);
+                frm.Show();
+                this.Hide();
             }
 
         }
@@ -99,6 +100,11 @@ namespace LGBookRentals
         {
             Order newOrder = new Order(selectedBook.bookName, selectedBook.bookId, rentalLength, selectedBook.rentalPrice);
             return newOrder;
+        }
+
+        public void addOrderToAccount(Order thisOrder, User thisUser)
+        {
+            thisUser.orders.Add(thisOrder);
         }
     }
 }

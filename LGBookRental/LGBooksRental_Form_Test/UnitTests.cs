@@ -47,6 +47,16 @@ namespace LGBooksRental_Form_Test
             Assert.IsTrue(user1.orders.Count > 0);
         }
 
+        [TestMethod]
+        public void TestAddOrderToAccountMethod()
+        {
+            User currentUser = new User("nicole", "word");
+            availableBooksPage bookApp = new availableBooksPage(currentUser);
+            Book selectedBook = new Book(12, "Patterns", 12.99);
+            Order order1 = bookApp.createNewOrder(selectedBook, 3);
+            bookApp.addOrderToAccount(order1, currentUser);
+            Assert.IsTrue(currentUser.orders.Count > 0);
+        }
 
         [TestMethod]
         public void TestAddShippingAndPaymentInfo()
@@ -54,7 +64,8 @@ namespace LGBooksRental_Form_Test
             User currentUser = new User("nicole", "word");
             Order testOrder = new Order("Test", 12, 3, 5.00);
             checkoutPage currentCheckoutPage = new checkoutPage(testOrder, currentUser);
-            testOrder = currentCheckoutPage.addShippingAndPaymentInfo(testOrder, "982 Magnolia St.", "1234567890");
+            testOrder = currentCheckoutPage.addShippingAndPaymentInfo(testOrder,
+                "982 Magnolia St.", "1234567890");
             Assert.AreEqual(testOrder.shippingAddress, "982 Magnolia St.");
         }
 
