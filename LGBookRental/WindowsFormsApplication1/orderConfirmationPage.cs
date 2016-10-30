@@ -18,6 +18,9 @@ namespace LGBookRentals
         User currentUser;
         public orderConfirmationPage(Order currentOrder, User currentUser)
         {
+            Random rnd = new Random();
+            int ordnum = rnd.Next(100000);
+
             this.currentOrder = currentOrder;
             this.currentUser = currentUser;
             InitializeComponent();
@@ -32,7 +35,10 @@ namespace LGBookRentals
                             + "\n Shipping Address: "
                             + currentOrder.shippingAddress
                             + "\n Credit Card Number: "
-                            + currentOrder.displayCreditCardNumber);
+                            + currentOrder.displayCreditCardNumber
+                            + "\n Order Number: "
+                            + ordnum);
+
 
 
             System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
@@ -40,12 +46,12 @@ namespace LGBookRentals
             //MAKE SURE TO CHANGE THE DB LOCATION TO YOUR DIRECTORY
             conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;" +
         @"Data source= C:\Users\Masters PC\Desktop\SSE657 Object oriented design\LGBookRental\LGBookRental\WindowsFormsApplication1\db.mdb";
-
+                  
             try
             {
                 conn.Open();
 
-                String my_querry = "INSERT INTO orders (ordernumber) VALUES('"+123456+"')";
+                String my_querry = "INSERT INTO orders (ordernumber) VALUES('"+ordnum+"')";
 
                 OleDbCommand cmd = new OleDbCommand(my_querry, conn);
                 cmd.ExecuteNonQuery();
@@ -76,7 +82,7 @@ namespace LGBookRentals
 
         private void finishBtn_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("For your reference write your order number: ");
         }
     }
 }
