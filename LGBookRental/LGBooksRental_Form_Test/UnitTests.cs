@@ -53,8 +53,9 @@ namespace LGBooksRental_Form_Test
             User currentUser = new User("nicole", "word");
             availableBooksPage bookApp = new availableBooksPage(currentUser);
             Book selectedBook = new Book(12, "Patterns", 12.99);
-            Order order1 = bookApp.createNewOrder(selectedBook, 3);
-            bookApp.addOrderToAccount(order1, currentUser);
+            Order currentOrder = bookApp.createNewOrder(selectedBook, 3);
+            orderConfirmationPage confirmationPage = new orderConfirmationPage(currentOrder, currentUser);           
+            confirmationPage.addOrderToAccount(currentOrder, currentUser);
             Assert.IsTrue(currentUser.orders.Count > 0);
         }
 

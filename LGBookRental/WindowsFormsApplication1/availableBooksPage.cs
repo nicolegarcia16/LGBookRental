@@ -64,7 +64,6 @@ namespace LGBookRentals
             {
                 Book selectedBook = (Book)booklist.SelectedItem;
                 Order currentOrder = createNewOrder(selectedBook, int.Parse(RentalLenght.Text));
-                addOrderToAccount(currentOrder, this.currentUser);
                 checkoutPage frm = new checkoutPage(currentOrder, currentUser);
                 frm.Show();
                 this.Hide();
@@ -102,9 +101,5 @@ namespace LGBookRentals
             return newOrder;
         }
 
-        public void addOrderToAccount(Order thisOrder, User thisUser)
-        {
-            thisUser.orders.Add(thisOrder);
-        }
     }
 }
