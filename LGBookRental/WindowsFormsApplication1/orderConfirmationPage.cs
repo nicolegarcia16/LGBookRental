@@ -68,6 +68,9 @@ namespace LGBookRentals
                 conn.Close();
             }
 
+
+
+
         }
 
         private void goBackBtn_Click(object sender, EventArgs e)
@@ -79,12 +82,7 @@ namespace LGBookRentals
 
         private void finishBtn_Click(object sender, EventArgs e)
         {
-            addOrderToAccount(currentOrder, currentUser);
-        }
-
-        public void addOrderToAccount(Order thisOrder, User thisUser)
-        {
-            thisUser.orders.Add(thisOrder);
+            MessageBox.Show("For your reference write your order number: ");
         }
     }
 }

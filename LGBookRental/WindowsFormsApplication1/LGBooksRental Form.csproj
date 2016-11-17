@@ -148,6 +148,10 @@
     <Content Include="img\Book.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="img\logo.gif" />
+    <Content Include="img\logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="img\uml.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

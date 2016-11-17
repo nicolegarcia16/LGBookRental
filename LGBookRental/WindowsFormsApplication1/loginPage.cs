@@ -8,6 +8,9 @@ namespace LGBookRentals
         public loginPage()
         {
             InitializeComponent();
+
+            logopicbox.Image = Image.FromFile("img/logo.jpg");
+
         }
 
         private void button1_Click(object sender, EventArgs e)
