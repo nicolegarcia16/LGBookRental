@@ -19,22 +19,13 @@ namespace LGBookRentals
         {
             InitializeComponent();
             this.currentUser = currentUser;
-            availableBooks = addAvailableBooks();
-
-            //Book b1 = new Book(547628, "UML Patterns", 4799);
+            availableBooks = addAvailableBooks();           
 
             BindingSource bookSource = new BindingSource();
             bookSource.DataSource = availableBooks;
             booklist.DataSource = bookSource.DataSource;
             booklist.DisplayMember = "bookName";
             booklist.ValueMember = "rentalPrice";
-
-            //booklist.Items.Add(b1.bookName);
-
-            // readonly! 
-
-       
-
 
         }
 

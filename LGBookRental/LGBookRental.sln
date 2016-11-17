@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LGBookRental", "LGBookRental\LGBookRental.csproj", "{A3BB8147-F401-4C6F-B0AE-2D02333F2B7B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LGBooksRental Form", "WindowsFormsApplication1\LGBooksRental Form.csproj", "{2543C186-901B-4259-8F5B-2739C18C92A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LGBooksRental_Form_Test", "LGBooksRental_Form_Test\LGBooksRental_Form_Test.csproj", "{EE588E56-7613-4CC8-948D-2A827A2E40D8}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A3BB8147-F401-4C6F-B0AE-2D02333F2B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3BB8147-F401-4C6F-B0AE-2D02333F2B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3BB8147-F401-4C6F-B0AE-2D02333F2B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3BB8147-F401-4C6F-B0AE-2D02333F2B7B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2543C186-901B-4259-8F5B-2739C18C92A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2543C186-901B-4259-8F5B-2739C18C92A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2543C186-901B-4259-8F5B-2739C18C92A0}.Release|Any CPU.ActiveCfg = Release|Any CPU

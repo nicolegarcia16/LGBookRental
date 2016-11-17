@@ -18,8 +18,5 @@ namespace LGBookRentals
             bookName = name;
             rentalPrice = price;
         }
-
-
-
     }
 }
